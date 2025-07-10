@@ -1,0 +1,911 @@
+{
+	"folders": [
+		{
+			"name": "SurvivalHorrorGame",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine 5.6.0"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "SurvivalHorrorGame Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Test",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Test",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Test",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Shipping",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Shipping",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"Linux",
+					"Shipping",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Test",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Test",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Test",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Shipping",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Shipping",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGame LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGame LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGame",
+					"LinuxArm64",
+					"Shipping",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGameEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"Debug",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGameEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"DebugGame",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"SurvivalHorrorGameEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"label": "SurvivalHorrorGameEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"SurvivalHorrorGameEditor",
+					"Linux",
+					"Development",
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch SurvivalHorrorGame (Debug)",
+				"request": "launch",
+				"program": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "SurvivalHorrorGame Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/SurvivalHorrorGame 5.6": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6",
+					"/UEVFS/Root": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"name": "Launch SurvivalHorrorGame (DebugGame)",
+				"request": "launch",
+				"program": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "SurvivalHorrorGame Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/SurvivalHorrorGame 5.6": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6",
+					"/UEVFS/Root": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"name": "Launch SurvivalHorrorGame (Development)",
+				"request": "launch",
+				"program": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "SurvivalHorrorGame Linux Development Build",
+				"args": [
+				],
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/SurvivalHorrorGame 5.6": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6",
+					"/UEVFS/Root": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"name": "Launch SurvivalHorrorGame (Test)",
+				"request": "launch",
+				"program": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "SurvivalHorrorGame Linux Test Build",
+				"args": [
+				],
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/SurvivalHorrorGame 5.6": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6",
+					"/UEVFS/Root": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"name": "Launch SurvivalHorrorGame (Shipping)",
+				"request": "launch",
+				"program": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "SurvivalHorrorGame Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/SurvivalHorrorGame 5.6": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6",
+					"/UEVFS/Root": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"name": "Launch SurvivalHorrorGameEditor (Debug)",
+				"request": "launch",
+				"program": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "SurvivalHorrorGameEditor Linux Debug Build",
+				"args": [
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject"
+				],
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/SurvivalHorrorGame 5.6": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6",
+					"/UEVFS/Root": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"name": "Launch SurvivalHorrorGameEditor (DebugGame)",
+				"request": "launch",
+				"program": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "SurvivalHorrorGameEditor Linux DebugGame Build",
+				"args": [
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject"
+				],
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/SurvivalHorrorGame 5.6": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6",
+					"/UEVFS/Root": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"name": "Launch SurvivalHorrorGameEditor (Development)",
+				"request": "launch",
+				"program": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "SurvivalHorrorGameEditor Linux Development Build",
+				"args": [
+					"/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject"
+				],
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/SurvivalHorrorGame 5.6": "/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6",
+					"/UEVFS/Root": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/mnt/Apps/UnrealEngineProjects/SurvivalHorrorGame5.6/SurvivalHorrorGame.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/mnt/Apps/UnrealEngine/LinuxUnrealEngine5.6.0"
+			}
+		]
+	}
+}
